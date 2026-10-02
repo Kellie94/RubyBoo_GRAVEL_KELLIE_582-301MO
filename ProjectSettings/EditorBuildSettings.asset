@@ -6,7 +6,25 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/_/Scenes/Accueil.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/_/Scenes/Apothicaire.unity
+    guid: feaf450b2f9e2b8438093cbfe0eb45d7
+  - enabled: 1
+    path: Assets/_/Scenes/Game Over.unity
+    guid: d3c6ac396d9fa3d4fa78be8cfa462dc8
+  - enabled: 1
+    path: Assets/_/Scenes/Happy Ending.unity
+    guid: ca40ab5ef33672446acdd8ba574d37eb
+  - enabled: 1
+    path: "Assets/_/Scenes/Niveau 1 - For\xEAt.unity"
+    guid: d22849a08b5241a4dbf6a80c33763dab
+  - enabled: 1
+    path: Assets/_/Scenes/Niveau 2 - Cimetiere.unity
+    guid: e1a66b02a1facb440a647152744f5fef
+  - enabled: 1
+    path: Assets/_/Scenes/Niveau 3 - Caverne.unity
+    guid: 59b235b82fa411d47953ebc34dbaaa2f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
