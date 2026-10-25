@@ -16,6 +16,27 @@ public class Chaudron : MonoBehaviour
     public bool potionEchec = false;
     public bool potionVerte = false;
 
+    [Header("2. Les variables des potions")]
+    public GameObject VarPotionVerte;
+    public GameObject VarPotionEchec;
+
+    // Permet le on click() des boutons ingrédients et récupérer la valeur de la variable
+
+    public void AjouterRouge()
+    {
+        PlacerIngredient(true, false, false);
+    }
+
+    public void AjouterJaune()
+    {
+        PlacerIngredient(false, true, false);
+    }
+
+    public void AjouterBleu()
+    {
+        PlacerIngredient(false, false, true);
+    }
+
     // Fonction appelée par les boutons de l'UI pour remplir les slots
     public void PlacerIngredient(bool rouge, bool jaune, bool bleu)
     {
@@ -56,12 +77,22 @@ public class Chaudron : MonoBehaviour
         {
             potionVerte = true;
             Debug.Log("Ah! Est-ce que c'est la bonne potion? Succès");
+
+            // Change la variable Potion Succès à TRUE
+            if (VarPotionVerte != null)
+            {
+                VarPotionVerte.SetActive(true);
+            }
         }
         // SI AUCUNE RECETTE NE CORRESPOND : Potion d'échec
         else
         {
             potionEchec = true;
             Debug.Log("Oh! Est-ce le bon mélange? Échec");
+            if (VarPotionEchec != null)
+            {
+                VarPotionEchec.SetActive(true);
+            }
         }
 
         ViderChaudron();

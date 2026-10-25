@@ -11,7 +11,7 @@ public class BoutonIngredient : MonoBehaviour
     public bool estBleu = false;
 
     // Lié à la fonction OnClick() du bouton dans l'UI
-    private void OnClickBouton()
+    public void OnClickBouton()
     {
         if (chaudron == null)
         {
