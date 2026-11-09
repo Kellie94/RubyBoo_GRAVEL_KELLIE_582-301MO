@@ -94,23 +94,11 @@ public class Chaudron : MonoBehaviour
                 VarPotionEchec.SetActive(true);
             }
         }
-
-        ViderChaudron();
     }
 
     void ResetPotions()
     {
         potionEchec = false;
         potionVerte = false;
-    }
-
-    void ViderChaudron()
-    {
-        slot1Rouge = false;
-        slot1Jaune = false;
-        slot1Bleu = false;
-        slot2Rouge = false;
-        slot2Jaune = false;
-        slot2Bleu = false;
     }
 }
