@@ -472,6 +472,43 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1431820735}
   m_SourcePrefab: {fileID: 100100000, guid: a23fb293000fa8e4c80503409c5c14dc, type: 3}
+--- !u!1 &43106371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 43106372}
+  m_Layer: 0
+  m_Name: Watcher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &43106372
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43106371}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.65, y: 0.793, z: 2.71653}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1830539401}
+  - {fileID: 1530305191}
+  - {fileID: 154456848}
+  - {fileID: 95127586}
+  - {fileID: 1749797395}
+  - {fileID: 1464905736}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &50982498
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -876,6 +913,99 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bda1b081cfc036c4a9c640e8e31b9e77, type: 3}
+--- !u!1 &95127585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 95127586}
+  - component: {fileID: 95127589}
+  - component: {fileID: 95127588}
+  - component: {fileID: 95127587}
+  m_Layer: 0
+  m_Name: Watcher_champignon_orange
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &95127586
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95127585}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 43106372}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &95127587
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95127585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 275f95c71dc6d4da5b0b56be350fa878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.GameObjectAction
+  targetMode: 1
+  target: {fileID: 706709575}
+  operation: 0
+--- !u!114 &95127588
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95127585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d71c826f7478b474a82dd1d55164836d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.VariableCondition
+  Operator: 0
+  targetVariable: {fileID: 11400000, guid: 47c4eaa1e48f0f64f87ef81b7aa85249, type: 2}
+  operatorValue: 0
+  textOperator: 0
+  floatThreshold: 0
+  intThreshold: 0
+  boolThreshold: 1
+  stringThreshold: 
+--- !u!114 &95127589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95127585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3ffc110d7b684d53948cf43114e5752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.ConditionWatcher
+  conditions:
+  - {fileID: 95127588}
+  actions:
+  - {fileID: 95127587}
+  exitActions: []
+  holdTime: 0
+  afterTrigger: 3
+  debugLogging: 1
+  showHintMaterial: 0
+  hintTargetMode: 1
+  hintRenderer: {fileID: 0}
+  hintMaterial: {fileID: 0}
 --- !u!1001 &132457461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1042,6 +1172,99 @@ MonoBehaviour:
   targetMode: 1
   target: {fileID: 1667480934}
   operation: 0
+--- !u!1 &154456847
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 154456848}
+  - component: {fileID: 154456851}
+  - component: {fileID: 154456850}
+  - component: {fileID: 154456849}
+  m_Layer: 0
+  m_Name: Watcher_citrouille
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &154456848
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154456847}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 43106372}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &154456849
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154456847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 275f95c71dc6d4da5b0b56be350fa878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.GameObjectAction
+  targetMode: 1
+  target: {fileID: 610397144}
+  operation: 0
+--- !u!114 &154456850
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154456847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d71c826f7478b474a82dd1d55164836d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.VariableCondition
+  Operator: 0
+  targetVariable: {fileID: 11400000, guid: 008ef21020f7e8b42869b92266301963, type: 2}
+  operatorValue: 0
+  textOperator: 0
+  floatThreshold: 0
+  intThreshold: 0
+  boolThreshold: 1
+  stringThreshold: 
+--- !u!114 &154456851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154456847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3ffc110d7b684d53948cf43114e5752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.ConditionWatcher
+  conditions:
+  - {fileID: 154456850}
+  actions:
+  - {fileID: 154456849}
+  exitActions: []
+  holdTime: 0
+  afterTrigger: 3
+  debugLogging: 1
+  showHintMaterial: 0
+  hintTargetMode: 1
+  hintRenderer: {fileID: 0}
+  hintMaterial: {fileID: 0}
 --- !u!1001 &162103910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3438,7 +3661,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &626754750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4392,6 +4615,8 @@ GameObject:
   - component: {fileID: 821533543}
   - component: {fileID: 821533542}
   - component: {fileID: 821533541}
+  - component: {fileID: 821533546}
+  - component: {fileID: 821533545}
   m_Layer: 5
   m_Name: Button_IngredientChampignonMauve
   m_TagString: Untagged
@@ -4535,6 +4760,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 821533539}
   m_CullTransparentMesh: 1
+--- !u!114 &821533545
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821533539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 275f95c71dc6d4da5b0b56be350fa878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.GameObjectAction
+  targetMode: 1
+  target: {fileID: 821533539}
+  operation: 0
+--- !u!114 &821533546
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821533539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d71c826f7478b474a82dd1d55164836d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.VariableCondition
+  Operator: 0
+  targetVariable: {fileID: 11400000, guid: f06eb0635f0b0ee40ab962e6bc891e9b, type: 2}
+  operatorValue: 0
+  textOperator: 0
+  floatThreshold: 0
+  intThreshold: 0
+  boolThreshold: 1
+  stringThreshold: 
 --- !u!1001 &825721650
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6766,6 +7026,99 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4981456768755581169, guid: e5053b0ea989f58489dd0cf13759c20e, type: 3}
   m_PrefabInstance: {fileID: 978892736}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1464905735
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1464905736}
+  - component: {fileID: 1464905739}
+  - component: {fileID: 1464905738}
+  - component: {fileID: 1464905737}
+  m_Layer: 0
+  m_Name: Watcher_placeholder2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1464905736
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464905735}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 43106372}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1464905737
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464905735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 275f95c71dc6d4da5b0b56be350fa878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.GameObjectAction
+  targetMode: 1
+  target: {fileID: 180466321}
+  operation: 0
+--- !u!114 &1464905738
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464905735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d71c826f7478b474a82dd1d55164836d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.VariableCondition
+  Operator: 0
+  targetVariable: {fileID: 11400000, guid: ae493eeb85aa5fd4fac0f4fe62757af6, type: 2}
+  operatorValue: 0
+  textOperator: 0
+  floatThreshold: 0
+  intThreshold: 0
+  boolThreshold: 1
+  stringThreshold: 
+--- !u!114 &1464905739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464905735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3ffc110d7b684d53948cf43114e5752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.ConditionWatcher
+  conditions:
+  - {fileID: 1464905738}
+  actions:
+  - {fileID: 1464905737}
+  exitActions: []
+  holdTime: 0
+  afterTrigger: 3
+  debugLogging: 1
+  showHintMaterial: 0
+  hintTargetMode: 1
+  hintRenderer: {fileID: 0}
+  hintMaterial: {fileID: 0}
 --- !u!1 &1495737172
 GameObject:
   m_ObjectHideFlags: 0
@@ -6816,6 +7169,99 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6403878146597266568, guid: 9176e501f8f175f47ad799676c6fe9ee, type: 3}
   m_PrefabInstance: {fileID: 162103910}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1530305190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1530305191}
+  - component: {fileID: 1530305194}
+  - component: {fileID: 1530305193}
+  - component: {fileID: 1530305192}
+  m_Layer: 0
+  m_Name: Watcher_fleur_mauve
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1530305191
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530305190}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 43106372}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1530305192
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530305190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 275f95c71dc6d4da5b0b56be350fa878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.GameObjectAction
+  targetMode: 1
+  target: {fileID: 73584409}
+  operation: 0
+--- !u!114 &1530305193
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530305190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d71c826f7478b474a82dd1d55164836d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.VariableCondition
+  Operator: 0
+  targetVariable: {fileID: 11400000, guid: 412f154784525f14ca1edbe76ad04a43, type: 2}
+  operatorValue: 0
+  textOperator: 0
+  floatThreshold: 0
+  intThreshold: 0
+  boolThreshold: 1
+  stringThreshold: 
+--- !u!114 &1530305194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530305190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3ffc110d7b684d53948cf43114e5752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.ConditionWatcher
+  conditions:
+  - {fileID: 1530305193}
+  actions:
+  - {fileID: 1530305192}
+  exitActions: []
+  holdTime: 0
+  afterTrigger: 3
+  debugLogging: 1
+  showHintMaterial: 0
+  hintTargetMode: 1
+  hintRenderer: {fileID: 0}
+  hintMaterial: {fileID: 0}
 --- !u!1001 &1551099083
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8150,6 +8596,99 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 652895113369251465, guid: 769d3ccff37b6a3469ab979783b52bc6, type: 3}
   m_PrefabInstance: {fileID: 1170087946}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1749797394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1749797395}
+  - component: {fileID: 1749797398}
+  - component: {fileID: 1749797397}
+  - component: {fileID: 1749797396}
+  m_Layer: 0
+  m_Name: Watcher_placeholder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1749797395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749797394}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 43106372}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1749797396
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749797394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 275f95c71dc6d4da5b0b56be350fa878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.GameObjectAction
+  targetMode: 1
+  target: {fileID: 20226130}
+  operation: 0
+--- !u!114 &1749797397
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749797394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d71c826f7478b474a82dd1d55164836d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.VariableCondition
+  Operator: 0
+  targetVariable: {fileID: 11400000, guid: c37e94d2a62217f459f5eb5a9ddafe1e, type: 2}
+  operatorValue: 0
+  textOperator: 0
+  floatThreshold: 0
+  intThreshold: 0
+  boolThreshold: 1
+  stringThreshold: 
+--- !u!114 &1749797398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749797394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3ffc110d7b684d53948cf43114e5752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.ConditionWatcher
+  conditions:
+  - {fileID: 1749797397}
+  actions:
+  - {fileID: 1749797396}
+  exitActions: []
+  holdTime: 0
+  afterTrigger: 3
+  debugLogging: 1
+  showHintMaterial: 0
+  hintTargetMode: 1
+  hintRenderer: {fileID: 0}
+  hintMaterial: {fileID: 0}
 --- !u!1 &1753911087
 GameObject:
   m_ObjectHideFlags: 0
@@ -8373,6 +8912,99 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 923b5ce52820c704e9d35e8d3e94b464, type: 3}
+--- !u!1 &1830539400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1830539401}
+  - component: {fileID: 1830539404}
+  - component: {fileID: 1830539403}
+  - component: {fileID: 1830539402}
+  m_Layer: 0
+  m_Name: Watcher_champignon_mauve
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1830539401
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830539400}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 43106372}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1830539402
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830539400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 275f95c71dc6d4da5b0b56be350fa878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.GameObjectAction
+  targetMode: 1
+  target: {fileID: 821533539}
+  operation: 0
+--- !u!114 &1830539403
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830539400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d71c826f7478b474a82dd1d55164836d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.VariableCondition
+  Operator: 0
+  targetVariable: {fileID: 11400000, guid: f06eb0635f0b0ee40ab962e6bc891e9b, type: 2}
+  operatorValue: 0
+  textOperator: 0
+  floatThreshold: 0
+  intThreshold: 0
+  boolThreshold: 1
+  stringThreshold: 
+--- !u!114 &1830539404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830539400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3ffc110d7b684d53948cf43114e5752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.ConditionWatcher
+  conditions:
+  - {fileID: 1830539403}
+  actions:
+  - {fileID: 1830539402}
+  exitActions: []
+  holdTime: 0
+  afterTrigger: 3
+  debugLogging: 1
+  showHintMaterial: 0
+  hintTargetMode: 1
+  hintRenderer: {fileID: 0}
+  hintMaterial: {fileID: 0}
 --- !u!1 &1843931062
 GameObject:
   m_ObjectHideFlags: 0
@@ -13064,3 +13696,4 @@ SceneRoots:
   - {fileID: 674808827}
   - {fileID: 459619935}
   - {fileID: 1684475367}
+  - {fileID: 43106372}

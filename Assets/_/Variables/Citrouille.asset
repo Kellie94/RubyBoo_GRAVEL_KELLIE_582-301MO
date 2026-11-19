@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3ad3d94c76a74ffaae15625647ada6a, type: 3}
-  m_Name: "Ingr\xE9dient Rouge"
+  m_Name: Citrouille
   m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.BoolVariable
   m_Id: 0bc81a651d154999a60c9f27c689c15f
   Persistent: 0

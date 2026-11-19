@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3ad3d94c76a74ffaae15625647ada6a, type: 3}
-  m_Name: "Ingr\xE9dient Bleu"
+  m_Name: Champignon_orange
   m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.BoolVariable
-  m_Id: 18fdb16eaba2460590c316a750641fcb
+  m_Id: 87bea5a4848645ef9b57ea176ff3a19a
   Persistent: 0
   m_InitialValue: 0

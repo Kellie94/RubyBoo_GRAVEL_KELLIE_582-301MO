@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3ad3d94c76a74ffaae15625647ada6a, type: 3}
-  m_Name: "Ingr\xE9dient Jaune"
+  m_Name: Placeholder2
   m_EditorClassIdentifier: ColliderEventSystem::ColliderEventSystem.BoolVariable
-  m_Id: 881bd74907b54521a9961934921739d6
+  m_Id: 828fc4db271a48c09ebc9be78f0e68a2
   Persistent: 0
   m_InitialValue: 0
