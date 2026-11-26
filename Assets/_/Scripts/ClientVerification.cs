@@ -5,6 +5,9 @@ public class ClientVerification : MonoBehaviour
     [Header("Référence vers le Chaudron")]
     public Chaudron chaudronRef;
 
+    [Header("Réaction d'échec")]
+    [SerializeField] private GameObject Damage;
+
     // Fonction appelée lorsqu'interraction avec client
     public void InteragirAvecClient()
     {
@@ -29,8 +32,12 @@ public class ClientVerification : MonoBehaviour
         {
             Debug.Log("Le client reçoit une potion ratée... Beurk !");
 
-            // Mettez votre logique d'échec ici (ex: baisser la patience du client)
 
+            // Mettez votre logique d'échec ici (ex: baisser la patience du client)
+            if (Damage != null)
+            {
+                Damage.SetActive(true);
+            }
             // Remettre le chaudron vide
             ResetChaudronEtPotions();
         }
